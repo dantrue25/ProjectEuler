@@ -14,17 +14,14 @@ namespace ProjectEuler
         public int run()
         {
             int maxPossible = (int)Math.Sqrt(bigNum) + 1;
-            List<int> primes = MathFunctions.getPrimesList2(maxPossible);
-            //List<String> primesStr = new List<String>();
+            List<int> primes = MathFunctions.getPrimesList(maxPossible);
 
             for (int i = 0; i < primes.Count; i++)
             {
-                //primesStr.Add(primes[i].ToString());
                 if (bigNum % primes[i] == 0)
                     maxPrime = primes[i];
             }
 
-            //System.IO.File.WriteAllLines(@"C:\Users\Dan\Documents\ProjectEuler\PrimesList.txt", primesStr.ToArray());
             return maxPrime;
         }
     }

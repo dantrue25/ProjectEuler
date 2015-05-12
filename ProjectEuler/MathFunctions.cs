@@ -45,6 +45,7 @@ namespace ProjectEuler
             return primes;
         }
 
+        // Horribly slow at the moment, but is a Sieve-type solution
         public static List<int> getPrimesList2(int max)
         {
             List<int> primes = new List<int>();
@@ -58,12 +59,6 @@ namespace ProjectEuler
 
             while (currentIndex < primes.Count)
             {
-                //String primesStr = "";
-                //foreach (int num in primes)
-                //{
-                //    primesStr += num + " ";
-                //}
-
                 Console.WriteLine(currentIndex);
 
 
@@ -73,6 +68,8 @@ namespace ProjectEuler
                 int curIndexMult = currentIndex;
                 int multiple = primes[currentIndex];
                 int rem = multiple * current;
+                
+                // Remove multiples of the current number
                 while (rem <= max)
                 {
                     primes.Remove(rem);
