@@ -14,7 +14,7 @@ namespace ProjectEuler
         public int run()
         {
             int maxPossible = (int)Math.Sqrt(bigNum) + 1;
-            List<int> primes = MathFunctions.getPrimesList(maxPossible);
+            List<int> primes = MathFunctions.getPrimesList2(maxPossible);
             //List<String> primesStr = new List<String>();
 
             for (int i = 0; i < primes.Count; i++)
