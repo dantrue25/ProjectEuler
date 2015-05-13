@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,7 +19,7 @@ namespace ProjectEuler
             // Question number from argument
             int questionNum = 0;
             // Answer to question
-            int answer;
+            BigInteger answer;
             // Solution object
             Solution s;
             // Stopwatch object for timing

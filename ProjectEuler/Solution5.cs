@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,7 +11,7 @@ namespace ProjectEuler
     {
         int max = 20, product = 1;
 
-        public int run()
+        public BigInteger run()
         {
             List<int> neededFactors = new List<int>();
             for (int i = 2; i < max; i++)

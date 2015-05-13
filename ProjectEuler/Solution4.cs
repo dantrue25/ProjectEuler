@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,7 +17,7 @@ namespace ProjectEuler
         int largestPalin = 0;
         int fiveDig, sixDig;
 
-        public int run()
+        public BigInteger run()
         {
             // Make all possible 5 and 6-digit pallindrones. Then test if they are factors of two 3-digit numbers
             for (firstLast = 1; firstLast < 10; firstLast++)

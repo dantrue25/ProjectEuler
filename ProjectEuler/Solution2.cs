@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,7 +15,7 @@ namespace ProjectEuler
         int lastFibo = 2;
         int max = 4000000;
 
-        public int run()
+        public BigInteger run()
         {
             while (lastFibo < max)
             {

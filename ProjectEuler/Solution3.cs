@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,7 +12,7 @@ namespace ProjectEuler
         long bigNum = 600851475143;
         int maxPrime = 1;
 
-        public int run()
+        public BigInteger run()
         {
             int maxPossible = (int)Math.Sqrt(bigNum) + 1;
             List<int> primes = MathFunctions.getPrimesList(maxPossible);

@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,6 +51,7 @@
     <Compile Include="Solution3.cs" />
     <Compile Include="Solution4.cs" />
     <Compile Include="Solution5.cs" />
+    <Compile Include="Solution6.cs" />
     <Compile Include="UnimplementedSolution.cs" />
   </ItemGroup>
   <ItemGroup>

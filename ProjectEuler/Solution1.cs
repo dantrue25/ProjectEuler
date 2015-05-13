@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading;
 
@@ -11,7 +12,7 @@ namespace ProjectEuler
         int max = 1000;
         int factor1 = 3, factor2 = 5;
 
-        public int run()
+        public BigInteger run()
         {
             int total = 0;
             int factor3 = factor1 * factor2;
