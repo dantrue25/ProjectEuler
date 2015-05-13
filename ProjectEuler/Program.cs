@@ -12,7 +12,7 @@ namespace ProjectEuler
     class Program
     {
         // List of answered questions
-        static List<int> answeredQuestions = new List<int> { 1, 2, 3, 4, 5, 6, 7 };
+        static List<int> answeredQuestions = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8 };
 
         static int Main(string[] args)
         {
@@ -69,6 +69,9 @@ namespace ProjectEuler
                     break;
                 case (7):
                     s = new Solution7();
+                    break;
+                case (8):
+                    s = new Solution8();
                     break;
                 default:
                     s = new UnimplementedSolution();
