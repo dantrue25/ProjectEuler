@@ -52,6 +52,7 @@
     <Compile Include="Solution4.cs" />
     <Compile Include="Solution5.cs" />
     <Compile Include="Solution6.cs" />
+    <Compile Include="Solution7.cs" />
     <Compile Include="UnimplementedSolution.cs" />
   </ItemGroup>
   <ItemGroup>

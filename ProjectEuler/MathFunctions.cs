@@ -83,6 +83,43 @@ namespace ProjectEuler
             return primes;
         }
 
+        public static List<int> primesListOfSize(int size)
+        {
+            List<int> primes = new List<int> { 2 };
+            bool isPrime = true;
+            int i = 3;
+
+            // Keep getting primes until the list has 'size' number of members
+            while (primes.Count < size)
+            {
+                /*
+                 * For all primes currently in 'primes' that are less than the sqrt
+                 * of the current number, check if current number is divisible 
+                 * by any prime. If it is, break out of the loop and check the next
+                 * number. If it was divisible by a prime, then the current number
+                 * is not prime. If it reached the sqrt of the current number and
+                 * wasn't divisible by any of the primes before it, it is prime. 
+                 */
+                for (int j = 0; j < primes.Count; j++)
+                {
+                    if (i % primes[j] == 0)
+                    {
+                        isPrime = false;
+                        break;
+                    }
+                    if (primes[j] > (int)Math.Sqrt(i))
+                        break;
+                }
+
+                if (isPrime)
+                    primes.Add(i);
+                isPrime = true;
+                i++;
+            }
+
+            return primes;
+        }
+
         // Return the prime factorization of an integer
         public static List<int> primeFactors(int num)
         {
