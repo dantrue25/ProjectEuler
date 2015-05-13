@@ -21,7 +21,7 @@ namespace ProjectEuler
             {
                 sum += i * i;
             }
-            Console.WriteLine("Sum of squares: " + sum);
+
             return sum;
         }
 
@@ -33,7 +33,7 @@ namespace ProjectEuler
             {
                 sum += i;
             }
-            Console.WriteLine("Square of sum: " + sum * sum);
+
             return sum * sum;
         }
     }
