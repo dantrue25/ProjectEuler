@@ -11,7 +11,7 @@ namespace ProjectEuler
     class Program
     {
         // List of answered questions
-        static List<int> answeredQuestions = new List<int> { 1, 2, 3, 4, 5 };
+        static List<int> answeredQuestions = new List<int> { 1, 2, 3, 4, 5, 6 };
 
         static int Main(string[] args)
         {
@@ -48,20 +48,23 @@ namespace ProjectEuler
             // Create Solution object corresponding to argument
             switch (questionNum)
             {
-                case(1):
+                case (1):
                     s = new Solution1();
                     break;
-                case(2):
+                case (2):
                     s = new Solution2();
                     break;
-                case(3):
+                case (3):
                     s = new Solution3();
                     break;
-                case(4):
+                case (4):
                     s = new Solution4();
                     break;
-                case(5):
+                case (5):
                     s = new Solution5();
+                    break;
+                case (6):
+                    s = new Solution6();
                     break;
                 default:
                     s = new UnimplementedSolution();
