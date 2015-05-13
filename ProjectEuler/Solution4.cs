@@ -8,19 +8,25 @@ namespace ProjectEuler
 {
     class Solution4 : Solution
     {
+        /*
+         * Integers to represent the digits of the 5 and 6-digit numbers.
+         * Initially the numbers are 10001 and 100001.
+         */
         int firstLast = 1, secondSecondLast = 0, middleMiddles = 0;
-        int largestPalin = 100001;
+        int largestPalin = 0;
+        int fiveDig, sixDig;
 
         public int run()
         {
+            // Make all possible 5 and 6-digit pallindrones. Then test if they are factors of two 3-digit numbers
             for (firstLast = 1; firstLast < 10; firstLast++)
             {
                 for (secondSecondLast = 0; secondSecondLast < 10; secondSecondLast++)
                 {
                     for (middleMiddles = 0; middleMiddles < 10; middleMiddles++)
                     {
-                        int sixDig = convertTo6DigitNum();
-                        int fiveDig = convertTo5DigitNum();
+                        sixDig = convertTo6DigitNum();
+                        fiveDig = convertTo5DigitNum();
 
                         if (has3DigitFactor(sixDig))
                             largestPalin = sixDig;
@@ -51,6 +57,7 @@ namespace ProjectEuler
             return total;
         }
 
+        // Check to see if num is a multiple of two 3-digit numbers
         private bool has3DigitFactor(int num)
         {
             bool hasFactor = false;

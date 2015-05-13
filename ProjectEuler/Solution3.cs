@@ -16,6 +16,7 @@ namespace ProjectEuler
             int maxPossible = (int)Math.Sqrt(bigNum) + 1;
             List<int> primes = MathFunctions.getPrimesList(maxPossible);
 
+            // Check primes list to find largest prime that is a factor of bigNum
             for (int i = 0; i < primes.Count; i++)
             {
                 if (bigNum % primes[i] == 0)
