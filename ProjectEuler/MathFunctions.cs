@@ -16,7 +16,7 @@ namespace ProjectEuler
             bool isPrime = true;
 
             // Check all numbers from 3 to max to possibly add to primes list
-            for (int i = 3; i < max; i++)
+            for (int i = 3; i <= max; i++)
             {
                 /*
                  * For all primes currently in 'primes' that are less than the sqrt
@@ -81,6 +81,32 @@ namespace ProjectEuler
             }
 
             return primes;
+        }
+
+        // Return the prime factorization of an integer
+        public static List<int> primeFactors(int num)
+        {
+            List<int> primes = MathFunctions.getPrimesList(num);
+            List<int> factors = new List<int>();
+            while (num != 1)
+            {
+                foreach (int prime in primes)
+                {
+                    if (num % prime == 0)
+                    {
+                        num /= prime;
+                        factors.Add(prime);
+                        break;
+                    }
+                    else
+                    {
+                        primes.Remove(prime);
+                        break;
+                    }
+                }
+            }
+
+            return factors;
         }
     }
 }
