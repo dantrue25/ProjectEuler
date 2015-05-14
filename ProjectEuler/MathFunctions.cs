@@ -10,7 +10,7 @@ namespace ProjectEuler
     class MathFunctions
     {
         // Return a list of prime numbers up to the maximum number
-        public static List<int> getPrimesList(int max)
+        public static List<int> primesListUnder(int max)
         {
             List<int> primes = new List<int> { 2 };
             bool isPrime = true;
@@ -83,6 +83,7 @@ namespace ProjectEuler
             return primes;
         }
 
+        // Return a list of primes with a size of the given number
         public static List<int> primesListOfSize(int size)
         {
             List<int> primes = new List<int> { 2 };
@@ -123,7 +124,7 @@ namespace ProjectEuler
         // Return the prime factorization of an integer
         public static List<int> primeFactors(int num)
         {
-            List<int> primes = MathFunctions.getPrimesList(num);
+            List<int> primes = MathFunctions.primesListUnder(num);
             List<int> factors = new List<int>();
             while (num != 1)
             {
@@ -144,6 +145,23 @@ namespace ProjectEuler
             }
 
             return factors;
+        }
+
+        public static List<int> getFactors(int num)
+        {
+            HashSet<int> factors = new HashSet<int> { 1, num };
+            int upperLimit = (int)Math.Sqrt(num) + 1;
+
+            for (int i = 2; i < upperLimit; i++)
+            {
+                if (num % i == 0)
+                {
+                    factors.Add(i);
+                    factors.Add(num / i);
+                }
+            }
+
+            return factors.ToList<int>();
         }
     }
 }

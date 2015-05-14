@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectEuler.Solutions;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -24,9 +25,9 @@ namespace ProjectEuler
             questionNumberToSolution.Add(7, new Solution7());
             questionNumberToSolution.Add(8, new Solution8());
             questionNumberToSolution.Add(9, new Solution9());
-            questionNumberToSolution.Add(10, new UnimplementedSolution());
-            questionNumberToSolution.Add(11, new UnimplementedSolution());
-            questionNumberToSolution.Add(12, new UnimplementedSolution());
+            questionNumberToSolution.Add(10, new Solution10());
+            questionNumberToSolution.Add(11, new Solution11());
+            questionNumberToSolution.Add(12, new Solution12());
             questionNumberToSolution.Add(13, new UnimplementedSolution());
             questionNumberToSolution.Add(14, new UnimplementedSolution());
             questionNumberToSolution.Add(15, new UnimplementedSolution());

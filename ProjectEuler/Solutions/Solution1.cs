@@ -9,21 +9,21 @@ namespace ProjectEuler
 {
     class Solution1 : Solution
     {
-        int max = 1000;
-        int factor1 = 3, factor2 = 5;
+        private const int MAX = 1000;
+        private const int FACTOR_1 = 3, FACTOR_2 = 5;
 
         public BigInteger run()
         {
             int total = 0;
-            int factor3 = factor1 * factor2;
+            const int FACTOR_3 = FACTOR_1 * FACTOR_2;
 
-            for (int i = 0; i < max; i++)
+            for (int i = 0; i < MAX; i++)
             {
-                if (i % factor3 == 0)
+                if (i % FACTOR_3 == 0)
                     total += i;
-                else if (i % factor1 == 0)
+                else if (i % FACTOR_1 == 0)
                     total += i;
-                else if (i % factor2 == 0)
+                else if (i % FACTOR_2 == 0)
                     total += i;
             }
             return total;
