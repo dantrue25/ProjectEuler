@@ -17,9 +17,7 @@ namespace ProjectEuler.Solutions
             int num = 2;
 
             while (MathFunctions.getFactors((num * (num + 1)) / 2).Count < MAX_FACTORS)
-            {
                 num++;
-            }
 
             return (num * (num + 1)) / 2;
         }

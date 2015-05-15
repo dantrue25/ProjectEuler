@@ -28,8 +28,8 @@ namespace ProjectEuler
             questionNumberToSolution.Add(10, new Solution10());
             questionNumberToSolution.Add(11, new Solution11());
             questionNumberToSolution.Add(12, new Solution12());
-            questionNumberToSolution.Add(13, new UnimplementedSolution());
-            questionNumberToSolution.Add(14, new UnimplementedSolution());
+            questionNumberToSolution.Add(13, new Solution13());
+            questionNumberToSolution.Add(14, new Solution14());
             questionNumberToSolution.Add(15, new UnimplementedSolution());
             questionNumberToSolution.Add(16, new UnimplementedSolution());
             questionNumberToSolution.Add(17, new UnimplementedSolution());
