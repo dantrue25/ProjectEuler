@@ -163,5 +163,58 @@ namespace ProjectEuler
 
             return factors.ToList<int>();
         }
+
+        public static List<List<long>> pascalTriangle(int maxRow)
+        {
+            List<long> previousRow = new List<long> { 1 };
+            List<List<long>> pascalTriangle = new List<List<long>> { previousRow };
+            Console.WriteLine("previousRow count = " + previousRow.Count + " element = " + previousRow[0]);
+
+            for (int i = 1; i < maxRow; i++)
+            {
+                List<long> nextRow = new List<long>();
+                for (int j = 0; j < i; j++)
+                {
+                    if (j == 0)
+                        nextRow.Add(previousRow[0]);
+                    else
+                        nextRow.Add(previousRow[j - 1] + previousRow[j]);
+                    
+                    if (j + 1 == previousRow.Count)
+                        nextRow.Add(previousRow[j]);
+                }
+                pascalTriangle.Add(nextRow);
+                previousRow = nextRow;
+            }
+
+            return pascalTriangle;
+        }
+
+        /*
+         * Graph version of Pascal's triangle. Recursive.
+         * 
+        private static List<int?> pascalTriangleRec(List<int?> pascalSoFar, int depthSoFar, int maxRow)
+        {
+
+        }
+
+        private abstract class PascalNode 
+        {
+            public int Value { get; set; }
+        }
+        private class NullNode : PascalNode 
+        {
+            public NullNode()
+            {
+                this.Value = 0;
+            }
+        }
+        private class ValueNode : PascalNode
+        {
+            public int Value { get; set; }
+            public PascalNode RightNeighbor, LeftNeighbor, RightChild, LeftChild;
+            public ValueNode (PascalNode 
+        }
+         */
     }
 }

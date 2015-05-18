@@ -30,7 +30,7 @@ namespace ProjectEuler
             questionNumberToSolution.Add(12, new Solution12());
             questionNumberToSolution.Add(13, new Solution13());
             questionNumberToSolution.Add(14, new Solution14());
-            questionNumberToSolution.Add(15, new UnimplementedSolution());
+            questionNumberToSolution.Add(15, new Solution15());
             questionNumberToSolution.Add(16, new UnimplementedSolution());
             questionNumberToSolution.Add(17, new UnimplementedSolution());
             questionNumberToSolution.Add(18, new UnimplementedSolution());
