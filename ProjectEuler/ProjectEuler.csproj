@@ -48,6 +48,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Solution.cs" />
+    <Compile Include="SolutionRunner.cs" />
     <Compile Include="Solutions\Solution1.cs" />
     <Compile Include="Solutions\Solution10.cs" />
     <Compile Include="Solutions\Solution11.cs" />
@@ -55,6 +56,7 @@
     <Compile Include="Solutions\Solution13.cs" />
     <Compile Include="Solutions\Solution14.cs" />
     <Compile Include="Solutions\Solution15.cs" />
+    <Compile Include="Solutions\Solution16.cs" />
     <Compile Include="Solutions\Solution2.cs" />
     <Compile Include="Solutions\Solution3.cs" />
     <Compile Include="Solutions\Solution4.cs" />
