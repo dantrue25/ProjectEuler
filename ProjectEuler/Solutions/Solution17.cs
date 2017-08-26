@@ -10,45 +10,38 @@ namespace ProjectEuler.Solutions
             var runningTotal = 0;
             for (var index = 1; index <= 1000; index++)
             {
-                var hasTheWordAndInIt = false;
-                var cur = index;
-                var thousands = cur / 1000;
-                cur %= 1000;
-                var hundreds = (cur / 100) * 100;
-                cur %= 100;
-                var tens = (cur / 10) * 10;
-                var ones = cur % 10;
-                
-                if (index == 1000)
-                {
-                    runningTotal += _integerToWordLengthDictionary[1000];
-                    //_allIntegerToWordLength.Add(index, _integerToWordLengthDictionary[1000]);
-                    break;
-                }
+                runningTotal += CalculateWordLengthOfInteger(index);
+            }
+            return runningTotal;
+        }
 
-                if (index > 100 && tens + ones > 0)
-                {
-                    hasTheWordAndInIt = true;
-                }
+        private int CalculateWordLengthOfInteger(int integer, bool includeTheWordAnd = true)
+        {
+            if (integer == 0) { return 0; }
+            var hasTheWordAndInIt = false;
 
-                if (tens < 20)
-                {
-                    ones += tens;
-                    tens = 0;
-                }
+            var thousands = (integer / 1000) * 1000;
+            var hundreds = ((integer % 1000) / 100) * 100;
+            var tens = ((integer % 100) / 10) * 10;
+            var ones = integer % 10;
 
-                //_allIntegerToWordLength.Add(index,
-                //    _integerToWordLengthDictionary[hundreds / 100] + (hundreds > 0 ? _integerToWordLengthDictionary[100] : 0) +
-                //    _integerToWordLengthDictionary[tens] +
-                //    _integerToWordLengthDictionary[ones] +
-                //    (hasTheWordAndInIt ? "and".Length : 0));
-                runningTotal += _integerToWordLengthDictionary[hundreds / 100] + (hundreds > 0 ? _integerToWordLengthDictionary[100] : 0) +
-                    _integerToWordLengthDictionary[tens] +
-                    _integerToWordLengthDictionary[ones] +
-                    (hasTheWordAndInIt ? "and".Length : 0);
+            if (integer > 100 && tens + ones > 0)
+            {
+                hasTheWordAndInIt = true;
             }
 
-            return runningTotal;
+            if (tens < 20)
+            {
+                ones += tens;
+                tens = 0;
+            }
+
+            return
+                (thousands > 0 ? CalculateWordLengthOfInteger(thousands / 1000, false) + _integerToWordLengthDictionary[1000] : 0) +
+                _integerToWordLengthDictionary[hundreds / 100] + (hundreds > 0 ? _integerToWordLengthDictionary[100] : 0) +
+                (hasTheWordAndInIt && includeTheWordAnd ? "and".Length : 0) + 
+                _integerToWordLengthDictionary[tens] +
+                _integerToWordLengthDictionary[ones];
         }
 
         private IDictionary<int, int> _integerToWordLengthDictionary = new Dictionary<int, int>
@@ -82,9 +75,7 @@ namespace ProjectEuler.Solutions
             { 80, "eighty".Length },
             { 90, "ninety".Length },
             { 100, "hundred".Length },
-            { 1000, "onethousand".Length }
+            { 1000, "thousand".Length }
         };
-
-        //private IDictionary<int, int> _allIntegerToWordLength = new Dictionary<int, int>();
     }
 }
