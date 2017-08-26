@@ -25,11 +25,13 @@ namespace ProjectEuler.Solutions
             var tens = ((integer % 100) / 10) * 10;
             var ones = integer % 10;
 
+            // include the word AND when it is greater than 100 and there is a tens or ones component
             if (integer > 100 && tens + ones > 0)
             {
                 hasTheWordAndInIt = true;
             }
 
+            // make sure to use the "teen" number lengths
             if (tens < 20)
             {
                 ones += tens;
