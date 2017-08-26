@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjectEuler
 {
@@ -13,7 +9,7 @@ namespace ProjectEuler
         public BigInteger run()
         {
             long sum = 0;
-            List<int> primesUnder2Mill = MathFunctions.primesListUnder(MAX);
+            List<int> primesUnder2Mill = MathFunctions.PrimesListUnder(MAX);
 
             foreach (int prime in primesUnder2Mill)
             {

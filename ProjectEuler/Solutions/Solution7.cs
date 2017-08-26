@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ProjectEuler
 {
@@ -10,7 +6,7 @@ namespace ProjectEuler
     {
         public System.Numerics.BigInteger run()
         {
-            List<int> primes = MathFunctions.primesListOfSize(10001);
+            List<int> primes = MathFunctions.PrimesListOfSize(10001);
             int prime10001 = primes[primes.Count - 1];
 
             return prime10001;

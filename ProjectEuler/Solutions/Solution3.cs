@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjectEuler
 {
@@ -15,7 +12,7 @@ namespace ProjectEuler
         public BigInteger run()
         {
             int maxPossible = (int)Math.Sqrt(bigNum) + 1;
-            List<int> primes = MathFunctions.primesListUnder(maxPossible);
+            List<int> primes = MathFunctions.PrimesListUnder(maxPossible);
 
             // Check primes list to find largest prime that is a factor of bigNum
             for (int i = 0; i < primes.Count; i++)

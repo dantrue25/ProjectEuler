@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Numerics;
 
 namespace ProjectEuler.Solutions
@@ -13,7 +9,7 @@ namespace ProjectEuler.Solutions
         public BigInteger run()
         {
             int depth = 2 * DIMENSION + 1;
-            List<List<long>> pascal = MathFunctions.pascalTriangle(depth);
+            List<List<long>> pascal = MathFunctions.PascalTriangle(depth);
 
             return pascal[depth - 1][DIMENSION];
         }

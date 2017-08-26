@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Numerics;
 
 namespace ProjectEuler.Solutions
@@ -13,10 +9,10 @@ namespace ProjectEuler.Solutions
 
         public BigInteger run()
         {
-            List<int> factors = MathFunctions.getFactors(28);
+            List<int> factors = MathFunctions.GetFactors(28);
             int num = 2;
 
-            while (MathFunctions.getFactors((num * (num + 1)) / 2).Count < MAX_FACTORS)
+            while (MathFunctions.GetFactors((num * (num + 1)) / 2).Count < MAX_FACTORS)
                 num++;
 
             return (num * (num + 1)) / 2;

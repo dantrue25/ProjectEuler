@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjectEuler
 {
@@ -10,7 +8,7 @@ namespace ProjectEuler
     class MathFunctions
     {
         // Return a list of prime numbers up to the maximum number
-        public static List<int> primesListUnder(int max)
+        public static List<int> PrimesListUnder(int max)
         {
             List<int> primes = new List<int> { 2 };
             bool isPrime = true;
@@ -46,7 +44,7 @@ namespace ProjectEuler
         }
 
         // Horribly slow at the moment, but is a Sieve-type solution
-        public static List<int> getPrimesList2(int max)
+        public static List<int> GetPrimesList2(int max)
         {
             List<int> primes = new List<int>();
             int current = 2;
@@ -84,7 +82,7 @@ namespace ProjectEuler
         }
 
         // Return a list of primes with a size of the given number
-        public static List<int> primesListOfSize(int size)
+        public static List<int> PrimesListOfSize(int size)
         {
             List<int> primes = new List<int> { 2 };
             bool isPrime = true;
@@ -122,9 +120,9 @@ namespace ProjectEuler
         }
 
         // Return the prime factorization of an integer
-        public static List<int> primeFactors(int num)
+        public static List<int> PrimeFactors(int num)
         {
-            List<int> primes = MathFunctions.primesListUnder(num);
+            List<int> primes = MathFunctions.PrimesListUnder(num);
             List<int> factors = new List<int>();
             while (num != 1)
             {
@@ -147,7 +145,7 @@ namespace ProjectEuler
             return factors;
         }
 
-        public static List<int> getFactors(int num)
+        public static List<int> GetFactors(int num)
         {
             HashSet<int> factors = new HashSet<int> { 1, num };
             int upperLimit = (int)Math.Sqrt(num) + 1;
@@ -164,7 +162,7 @@ namespace ProjectEuler
             return factors.ToList<int>();
         }
 
-        public static List<List<long>> pascalTriangle(int maxRow)
+        public static List<List<long>> PascalTriangle(int maxRow)
         {
             List<long> previousRow = new List<long> { 1 };
             List<List<long>> pascalTriangle = new List<List<long>> { previousRow };
@@ -189,32 +187,5 @@ namespace ProjectEuler
 
             return pascalTriangle;
         }
-
-        /*
-         * Graph version of Pascal's triangle. Recursive.
-         * 
-        private static List<int?> pascalTriangleRec(List<int?> pascalSoFar, int depthSoFar, int maxRow)
-        {
-
-        }
-
-        private abstract class PascalNode 
-        {
-            public int Value { get; set; }
-        }
-        private class NullNode : PascalNode 
-        {
-            public NullNode()
-            {
-                this.Value = 0;
-            }
-        }
-        private class ValueNode : PascalNode
-        {
-            public int Value { get; set; }
-            public PascalNode RightNeighbor, LeftNeighbor, RightChild, LeftChild;
-            public ValueNode (PascalNode 
-        }
-         */
     }
 }

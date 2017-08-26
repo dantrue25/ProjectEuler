@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjectEuler
 {
@@ -16,7 +12,7 @@ namespace ProjectEuler
             List<int> neededFactors = new List<int>();
             for (int i = 2; i < max; i++)
             {
-                List<int> primeFactorsForCurrent = MathFunctions.primeFactors(i);
+                List<int> primeFactorsForCurrent = MathFunctions.PrimeFactors(i);
                 foreach (int neededFactor in neededFactors)
                 {
                     primeFactorsForCurrent.Remove(neededFactor);
